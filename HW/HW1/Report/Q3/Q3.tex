@@ -1,1 +1,77 @@
 \section{Question 3}
+$$
+R_e = 6378_{km}
+$$
+
+
+$$
+r_p = R_e + 500
+$$
+
+$$
+r_a = R_e + 5000
+$$
+
+$$
+e = 
+\dfrac{r_a - r_p}{r_a + r_p} = 0.2465
+$$
+
+$$
+a = \dfrac{r_a + r_p}{2} = 9128
+$$
+
+$$
+\tau = 2\pi\sqrt{\dfrac{a^3}{\mu}} = 8679.1_{\sec}
+$$
+\subsection{a}
+Solving the below equations with Matlab script in Q3/Q3.m:
+$$
+e \cos(\theta) - (1 - e^2) \dfrac{a}{R_e} \sin(\theta) + 1 = 0
+$$
+
+$$
+\boldsymbol\theta = \begin{bmatrix}
+    2.5021 & 1.0022
+\end{bmatrix} rad
+$$
+
+$$
+E = 2 \tan^{-1}\left(\sqrt{\dfrac{1-e}{1+e}}  \tan(\theta/2)\right)
+$$
+
+$$
+M_e = E - e \sin(E)
+$$
+
+$$
+M_1 = 2.1587, \quad M_2 = 0.6275
+$$
+
+$$
+t = \dfrac{M}{2\pi}\tau
+$$
+
+$$
+\Delta t = \vert t_1 - t_2 \vert = 2981.8 - 866.7 = 2115.0 \sec
+$$
+\subsection{b}
+Solving the below equations with Matlab script in Q3/Q3.m:
+$$
+e \cos(\theta) - (1 - e^2) \dfrac{a}{R_e} \cos(\theta) + 1 = 0
+$$
+
+$$
+\boldsymbol\theta = \begin{bmatrix}
+    0.4251  &  2.2506
+\end{bmatrix} rad
+$$
+
+$$
+M_1 = 0.2521, \quad M_2 = 1.8202
+$$
+
+$$
+\Delta t = \vert t_1 - t_2 \vert = 2514.3 - 348.2 = 2166.13 \sec
+$$
+
