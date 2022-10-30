@@ -19,7 +19,7 @@ theta = acos(norm(h)^2 / mu / norm(r) - 1) / norm(e);
 fprintf("Theta(deg) = %f \n", theta * 180 / pi);
 
 
-epsilon = norm(v)^2 / 2 - mu / 2;
+epsilon = norm(v)^2 / 2 - mu / norm(r);
 
 r_2 = 32;
 v_2 = sqrt(2 * mu / r_2);
