@@ -1,0 +1,59 @@
+\section{Question 1}
+\subsection{a}
+$$
+\boldsymbol h = \boldsymbol r \times \boldsymbol v = \begin{vmatrix}
+	i & j & k \\
+	0 & 2 & 0 \\
+	\dfrac{\sqrt{2}}{2} & \dfrac{\sqrt{2}}{2} & 0
+\end{vmatrix} = \begin{bmatrix}
+	0 & 0 & -\sqrt{2}
+\end{bmatrix}
+$$
+
+$$
+\boldsymbol C = \dot{\boldsymbol{r}} \times \boldsymbol h - \mu \dfrac{\boldsymbol r}{r}
+$$
+
+In Astronomical/Canonical Units: $\mu = 1$
+
+$$
+\dfrac{\boldsymbol C}{\mu} = \boldsymbol e \to \boldsymbol e = \dfrac{\boldsymbol C}{\mu} = \begin{bmatrix}
+	-1 & -1 & 0
+\end{bmatrix}
+$$
+
+$$
+\boldsymbol h . \boldsymbol e =  \begin{bmatrix}
+	0 & 0 & -\sqrt{2}
+\end{bmatrix} . \begin{bmatrix}
+	-1 & -1 & 0
+\end{bmatrix} = 0
+$$
+
+
+\subsection{b, c}
+$$
+r = \dfrac{P}{1+e\cos(\theta)} \xrightarrow{P = \dfrac{h^2}{\mu}} r = \dfrac{h^2}{\mu}  \dfrac{1}{1+e\cos(\theta)} \to \theta = \arccos \left(( \dfrac{h^2}{\mu r} - 1 ) / e \right)
+$$
+
+Beacuse $ \boldsymbol r . \boldsymbol v > 0 $, $\theta$ is in the range $0 \leq \theta \leq \pi$
+$$
+\to \theta = \pi / 2
+$$
+
+$$
+\varepsilon = \dfrac{v^2}{2} - \dfrac{\mu}{r} = 0 = \text{constant}
+$$
+\subsection{d}
+In $ r = 32 DU $, $\varepsilon = 0$ and $\boldsymbol h = \text{constant}$, then $v$ and $\theta$ calculated as below:
+
+$$
+\varepsilon = 0 \to v = \sqrt{\dfrac{2 \mu}{r}} = 0.25~DU/TU
+$$
+
+$$
+\theta = \arccos \left(( \dfrac{h^2}{\mu r} - 1 ) / e \right) = 2.7862_{rad}
+$$
+
+
+
