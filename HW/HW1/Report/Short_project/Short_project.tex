@@ -129,3 +129,40 @@ Others Parameters have been calculated in short\_project/short\_project.m
         \centering
         \includegraphics[width=16cm]{../Figure/Short_project/xy_view.png}
     \end{figure}
+
+    \subsection{part c}
+    Using below tranfer matrix to tranfer from ECI corrdinate to ECEF corrdinate.
+    $$
+    \boldsymbol T^{ECCF-ECI} = \begin{bmatrix}
+        \cos(\omega_Et) & -\sin(\omega_Et)& 0\\
+        \sin(\omega_Et) &  \cos(\omega_Et)& 0\\
+                0       &      0          & 1
+    \end{bmatrix}
+    $$
+
+    $$
+    \phi = \arccos(\dfrac{\boldsymbol r(3)}{r})
+    $$
+
+    $$
+    \lambda = 
+\begin{cases}
+    \arctan(\dfrac{\boldsymbol r(1)}{r_{xy}}),& \boldsymbol r(2) > 0\\
+    2\pi-\arctan(\dfrac{\boldsymbol r(1)}{r_{xy}}),& \boldsymbol r(2) \leq 0\\
+\end{cases}
+    $$
+
+    \begin{figure}[H]
+        \caption{Satellite latitude versus its longitude for one period}
+        \centering
+        \includegraphics[width=16cm]{../Figure/Short_project/latlong.png}
+    \end{figure}
+
+    Below the figure drawn provided by tamaskis, please click \href{https://github.com/tamaskis/ground_track-MATLAB}{here} to see the source code. Please use mentioned library to run code or skip part on earth fig.
+
+    \begin{figure}[H]
+        \caption{Satellite latitude versus its longitude for one period}
+        \centering
+        \includegraphics[width=16cm]{../Figure/Short_project/latlong_earth.png}
+    \end{figure}
+
