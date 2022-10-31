@@ -75,6 +75,31 @@ print('../../Figure/Short_project/xy_view.png','-dpng','-r400');
 
 
 
+%% part b %%
+
+N = cross([0, 0, 1], h);
+
+
+if (e(3)) > 0
+    omega = acos(dot(N / norm(N), e / norm(e)));
+else
+    omega = 2*pi - acos(dot(N / norm(N), e / norm(e)));
+end
+
+
+
+% [phi, lambda] = latlon(r);
+
+for i=1:length(r)
+    r(i, :) = r(i, :) * T_m;
+end
+phi = zeros(1, length(r));
+lambda = zeros(1, length(r));
+for i=1:length(r)
+    [phi(i), lambda(i)] = latlon(r(i, :));
+end
+
+
 
 
 
@@ -101,4 +126,14 @@ d = zeros(6, 1);
 
 d(1:3)   = r_dot;
 d(4:end) = -mu / norm(r)^3 * r;
+end
+
+
+function [phi, lambda] = latlon(r)
+    phi = asin(r(3)/norm(r));
+    if r(2) > 0
+        lambda = acos(r(1) / norm(r(1:2)));
+    else
+        lambda = 2*pi - acos(r(1) / norm(r(1:2)));
+    end
 end
