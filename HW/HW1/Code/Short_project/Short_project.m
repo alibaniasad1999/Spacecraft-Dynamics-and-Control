@@ -3,7 +3,7 @@ mu = 398600;
 r = [1600, 5310, 3800]; %km
 v = [-7.350, 0.4600, 2.470]; % km/s
 %% part a %%
-v_r = dot(r, v) / norm(r); % v_r > 0  away from prigee
+v_r = dot(r, v) / norm(r); % v_r > 0  away from perigee
 h   = cross(r, v);
 e   = (cross(v, h) - mu * r / norm(r))/mu;
 theta = acos(dot(e, r) / norm(e) / norm(r));

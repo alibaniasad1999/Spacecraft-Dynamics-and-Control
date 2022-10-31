@@ -1,5 +1,20 @@
 \section{short project}
 \subsection{a}
+Use algorithm 4.2 of Curtis's book for calculation.
+
+$$
+v_r = \dfrac{\boldsymbol r \boldsymbol v}{r} =  0.0102 ~km /\sec \to \text{away from perigee}
+$$
+
+$$
+\boldsymbol h = \boldsymbol r \boldsymbol v = \begin{bmatrix}
+    11368 &  -31882  &  39764
+\end{bmatrix}
+$$
+$$
+\boldsymbol e = \dfrac{\boldsymbol v \times \boldsymbol h}{\mu} - \dfrac{\boldsymbol r}{r}
+$$
+Others Parameters have been calculated in short\_project/short\_project.m
 
 
 
@@ -88,3 +103,29 @@
    
     \end{longtable}
     \end{center}
+
+    \subsection{part b}
+
+    \begin{figure}[H]
+        \caption{3D trajectory}
+        \centering
+        \includegraphics[width=16cm]{../Figure/Short_project/3Dof_view.png}
+    \end{figure}
+
+    \begin{figure}[H]
+        \caption{3D trajectory in zx axis}
+        \centering
+        \includegraphics[width=16cm]{../Figure/Short_project/xz_view.png}
+    \end{figure}
+
+    \begin{figure}[H]
+        \caption{3D trajectory in zy axis}
+        \centering
+        \includegraphics[width=16cm]{../Figure/Short_project/yz_view.png}
+    \end{figure}
+
+    \begin{figure}[H]
+        \caption{3D trajectory in xy axis}
+        \centering
+        \includegraphics[width=16cm]{../Figure/Short_project/xy_view.png}
+    \end{figure}
