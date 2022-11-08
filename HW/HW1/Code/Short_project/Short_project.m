@@ -61,19 +61,19 @@ zlabel('Z(km)')
 hold on
 plot3(r(:, 1), r(:, 2), r(:, 3), 'b', 'linewidth', 4)
 
-print('../../Figure/Short_project/3Dof_view.png','-dpng','-r400');
+print -depsc ../../Figure/Short_project/3Dof_view
 
 view(0,0)
 
-print('../../Figure/Short_project/xz_view.png','-dpng','-r400');
+print -depsc ../../Figure/Short_project/xz_view
 
 view(-90,0)
 
-print('../../Figure/Short_project/yz_view.png','-dpng','-r400');
+print -depsc ../../Figure/Short_project/yz_view
 
 view(-90,-90)
 
-print('../../Figure/Short_project/xy_view.png','-dpng','-r400');
+print -depsc ../../Figure/Short_project/xy_view
 
 close all
 
@@ -98,7 +98,7 @@ axis equal
 axis([-180 180 -90 90])
 
 
-print('../../Figure/Short_project/latlong.eps','-dpng', '-image','-r400');
+print -depsc ../../Figure/Short_project/latlong
 
 
 
@@ -110,7 +110,7 @@ opts_earth1.Color = [140,21,21]/255;
 opts_earth1.LineWidth = 2.5;
 ground_track((phi)*180/pi,(lambda-pi)*180/pi,opts_earth1,'Earth');
 
-print('../../Figure/Short_project/latlong_earth.png','-dpng', '-image','-r400');
+print -depsc ../../Figure/Short_project/latlong_earth
 
 
 function E = E_calculator(theta, e)
