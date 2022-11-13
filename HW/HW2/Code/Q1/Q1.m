@@ -24,6 +24,10 @@ delta_v = abs(v_2_a - v_1);
 
 %% part b %%
 delta_t = delta_v / trust_simultaneously * mass;
+%% part c %%
+v_mean = (v_1 + v_2_a) / 2;
+distance = v_mean * delta_t;
+delta_distance = delta_v * delta_t;
 
 
 
