@@ -1,0 +1,53 @@
+\section{Question 3}
+$$
+r_p = 8000,~
+r_a = 13000
+e = \dfrac{r_a - r_p}{r_a + r_p},~
+a = \dfrac{r_a + r_p}{2},~
+\tau = 2 \pi \sqrt{\dfrac{a^3}{\mu}}
+$$
+
+Spacecraft 1:
+$$
+r_0 = \dfrac{h^2}{\mu}\dfrac{1}{1+e_1\cos(\theta_0)},~r_2 = = \dfrac{h^2}{\mu}\dfrac{1}{1+e_1\cos(\theta_2)}
+$$
+
+$$
+\boldsymbol{r}_0 = \begin{bmatrix}
+r_0 \cos(\theta_0) & r_0 \sin(\theta_0) & 0
+\end{bmatrix}, ~\boldsymbol{r}_2 = \begin{bmatrix}
+r_2 \cos(\theta_2) & r_2 \sin(\theta_2) & 0
+\end{bmatrix}
+$$
+
+$$
+\boldsymbol{v}_0 = \dfrac{\mu}{h}\begin{bmatrix}
+-\sin(\theta_0) & e+\cos(\theta_0) & 0
+\end{bmatrix}, ~\boldsymbol{v}_2 = \dfrac{\mu}{h}\begin{bmatrix}
+    -\sin(\theta_2) & e+\cos(\theta_2) & 0
+\end{bmatrix}
+$$
+
+
+Spacecraft 2:
+$$
+E = 2 \arctan\left(\sqrt{\dfrac{1-e}{1+e}}  \tan(\theta/2)\right),~M_e = E - e \sin(E),~M = \dfrac{2\pi}{\tau}t \xrightarrow[\theta_1 = \pi/6]{\theta_2 = \pi/2} t_1 = 542.785_{\sec},~t_2 = 1873.138_{\sec}
+$$
+
+Furthermore, I Used lambert's formulas to solve the problem, taking r0, r2, and delta t to lambert's formulas as input for the function.
+
+$$
+\boldsymbol{v}_{0l} = \begin{bmatrix}
+-2.7240 & 9.4690 & 0
+\end{bmatrix}_{\dfrac{km}{sec}}, ~\boldsymbol{v}_{2l} = \begin{bmatrix}
+    -7.8503 & 4.3427 &  0 
+\end{bmatrix}_{\dfrac{km}{sec}}
+$$
+
+$$
+\Delta \boldsymbol{v}_0 = \boldsymbol{v}_{0l} - \boldsymbol{v}_0 = \begin{bmatrix}
+    -2.7240 & 1.6149 & 0
+\end{bmatrix}_{\dfrac{km}{sec}}, ~\Delta \boldsymbol{v}_2 = \boldsymbol{v}_{2l} - \boldsymbol{v}_2 = \begin{bmatrix}
+    -1.5066 & 2.8323 &  0
+\end{bmatrix}_{\dfrac{km}{sec}}
+$$
