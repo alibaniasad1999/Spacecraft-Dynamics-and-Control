@@ -28,6 +28,16 @@ delta_t = delta_v / trust_simultaneously * mass;
 v_mean = (v_1 + v_2_a) / 2;
 distance = v_mean * delta_t;
 delta_distance = delta_v * delta_t;
+%% part d %%
+tau_1 = sqrt(mean(r_1+6378)^3 / mu);
+delta_t_1 = delta_t / tau_1;
+
+tau_2 = sqrt(mean(r_2+6378)^3 / mu);
+delta_t_2 = delta_t / tau_2;
+
+%% part e %%
+c_1 = 2*pi*(r_1(1)+6378);
+delta_d = delta_distance / c_1;
 
 
 
