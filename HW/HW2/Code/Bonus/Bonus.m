@@ -13,9 +13,9 @@ cost_1 = @(theta2)(sin(theta2) - (1 - ((5*cos(theta2))/7 - 3/14)^2)^(1/2))^2 +..
 
 cost_2 = @(theta2) + (sin(theta2) + (1 - ((5*cos(theta2))/7 - 3/14)^2)^(1/2))^2 +...
     ((2*cos(theta2))/7 + 3/14)^2;
-x = fminbnd(cost_2,-2*pi,2*pi)
-data = ones(1, length(dim))
+x = fminbnd(cost_2,-2*pi,2*pi);
+data = ones(1, length(dim));
 for i = 1:length(dim)
-data(i) = cost_1(dim(i))
+data(i) = cost_1(dim(i));
 end
 plot(dim , data)
