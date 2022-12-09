@@ -1,0 +1,65 @@
+\section{Question 4}
+
+$$
+\boldsymbol{r}_{ap}=\begin{bmatrix}
+    9798 &
+    5657 &
+    11314
+\end{bmatrix}, ~ 
+\boldsymbol{v}=\begin{bmatrix}
+    -0.1 &
+    0.2 &
+    0.3
+\end{bmatrix}
+$$
+
+$$
+a = \dfrac{r_{ap}}{2}
+$$
+
+$$
+\theta = \arccos\left(\dfrac{\boldsymbol{r}_{ap}.\boldsymbol{v}}{r_{ap}v}\right)
+$$
+
+There is 2 equations and 2 unknowns, so we can solve it by using MATLAB.
+
+$$
+\dfrac{h^2}{\mu} = a(1-e^2),~ v_r = \dfrac{\mu}{h}e\sin\theta \to e = 0.0656,~ h = 56348
+$$
+
+\subsection{part a}
+
+$$
+r = \dfrac{h^2}{\mu}\dfrac{1}{(1+e\cos\theta)} = \dfrac{h^2}{\mu(1+e\cos\theta)} = 7667.5_{\dfrac{km}{\sec}}
+$$
+
+\section{part b}
+
+$$
+v_{\perp} = \dfrac{h}{r} = 3.5217_{\dfrac{km}{\sec}}
+$$
+
+$$
+\gamma = \arctan\left(\dfrac{v_r}{v_{\perp}}\right) = 0.1058
+_{\text{rad}}
+$$
+% $$
+% r = [9798 5657 11314];
+% v_r = [-0.1 0.2 0.3];
+% mu = 398600;
+% a = norm(r)/2;
+% theta = acos(dot(r, v_r)/ norm(r) / norm(v_r));
+
+% syms h e
+% eq1 = h^2 / mu == a*(1-e^2);
+% eq2 = norm(v_r) == mu / h * e * sin(theta);
+
+% answer_eq = solve([eq1, eq2]);
+
+% e = double(answer_eq.e(2));
+% h = double(answer_eq.h(2));
+
+% v_n = h / norm(r);
+
+% gamma = atan(v_r/v_n);
+% $$
