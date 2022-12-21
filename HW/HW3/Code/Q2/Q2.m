@@ -1,4 +1,4 @@
-function Q2
+function Q2(a_data, e_data, i_data, Omega_data, theta_data)
 %
 % This function solve Example 10.9 the Gauss planetary equations for
 % solar radiation pressure (Equations 10.106).
@@ -29,11 +29,11 @@ CR = 2; %Radiation pressure codfficient
 m = 100; %Mass (kg)
 As = 200; %Frontal area (m^2);
 %...Initial orbital parameters (given):
-a0 = 10085.44; %Semimajor axis (km)
-e0 = 0.025422; %eccentricity
-incl0 = 88.3924*deg; %Inclination (radians)
-RA0 = 45.38124*deg; %Right ascencion of the node (radians)
-TA0 = 343.4268*deg; %True anomaly (radians)
+a0 = a_data; %Semimajor axis (km)
+e0 = e_data; %eccentricity
+incl0 = i_data; %Inclination (radians)
+RA0 = Omega_data; %Right ascencion of the node (radians)
+TA0 = theta_data; %True anomaly (radians)
 w0 = 227.493*deg; %Argument of perigee (radians)
 %...Initial orbital parameters (inferred):
 h0 = sqrt(mu*a0*(1-e0^2)); %angular momentrum (km^2/s)
@@ -49,12 +49,11 @@ t0 = 0; %Initial time (s)
 tf = 5*365*days; %final time (s)
 y0 = coe0'; %Initial orbital elements
 nout = 4000; %Number of solution points to output
-tspan = linspace(t0, tf, nout); %Integration time interval
+% tspan = linspace(t0, tf, nout); %Integration time interval
 options = odeset(...
 'reltol', 1.e-8, ...
-'abstol', 1.e-8, ...
-'initialstep', T0/1000);
-[t,y] = ode45(@rates, tspan, y0, options);
+'abstol', 1.e-8);
+[t,y] = ode45(@rates, 0:0.1:tf, y0, options);
 %...Extract or compute the orbital elements' time histories from the
 % solution vector y:
 h = y(:,1);
