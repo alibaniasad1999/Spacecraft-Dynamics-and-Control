@@ -34,4 +34,7 @@ end
 i = acos(h(3)/norm(h));
 %% use function %%
 Q2(a, norm(e), i, Omega, theta)
-% (a_data, e_data, i_data, Omega_data, theta_data)
+%% ploter a %%
+ploter_a(a, norm(e), i, Omega, theta)
+%% Q2 part b %%
+Q2_b(a, norm(e), i, Omega, theta)

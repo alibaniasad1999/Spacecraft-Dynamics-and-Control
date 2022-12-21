@@ -63,7 +63,7 @@ incl = y(:,4);
 w = y(:,5);
 TA = y(:,6);
 a = h.^2/mu./(1 - e.^2);
-save('data_Q2', 'y')
+save('data_Q2', 'y', 't');
 
 %...Smooth the data to remove short period variations:
 % h = rsmooth(h);
