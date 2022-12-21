@@ -48,12 +48,12 @@ JD0 = 2438400.5; %Initial Julian date (6 January 1964 0 UT)
 t0 = 0; %Initial time (s)
 tf = 5*365*days; %final time (s)
 y0 = coe0'; %Initial orbital elements
-nout = 4000; %Number of solution points to output
-% tspan = linspace(t0, tf, nout); %Integration time interval
+nout = 400000; %Number of solution points to output
+tspan = linspace(t0, tf, nout); %Integration time interval
 options = odeset(...
 'reltol', 1.e-8, ...
 'abstol', 1.e-8);
-[t,y] = ode45(@rates, 0:0.1:tf, y0, options);
+[t,y] = ode45(@rates, tspan, y0, options);
 %...Extract or compute the orbital elements' time histories from the
 % solution vector y:
 h = y(:,1);
