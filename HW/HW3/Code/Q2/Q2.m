@@ -1,4 +1,3 @@
-% 
 function Q2
 %
 % This function solve Example 10.9 the Gauss planetary equations for
@@ -47,7 +46,7 @@ coe0 = [h0 e0 RA0 incl0 w0 TA0];
 % from t0 to tf:
 JD0 = 2438400.5; %Initial Julian date (6 January 1964 0 UT)
 t0 = 0; %Initial time (s)
-tf = 3*365*days; %final time (s)
+tf = 5*365*days; %final time (s)
 y0 = coe0'; %Initial orbital elements
 nout = 4000; %Number of solution points to output
 tspan = linspace(t0, tf, nout); %Integration time interval
@@ -65,6 +64,7 @@ incl = y(:,4);
 w = y(:,5);
 TA = y(:,6);
 a = h.^2/mu./(1 - e.^2);
+save('data_Q2', 'y')
 
 %...Smooth the data to remove short period variations:
 % h = rsmooth(h);
@@ -73,37 +73,87 @@ a = h.^2/mu./(1 - e.^2);
 % incl = rsmooth(incl);
 % w = rsmooth(w);
 % a = rsmooth(a);
-figure(2)
-subplot(3,2,1)
-plot(t/days,h - h0)
-title('Angular Momentum (km^2/s)')
-xlabel('days')
+plot(t/days,h - h0, 'LineWidth',2)
+set(gca, 'FontSize', 16, 'FontName', 'Times New Roman');
+xlabel('Days', 'interpreter', 'latex', 'FontSize', 24);
+ylabel('$h-h_0$', 'interpreter', 'latex', 'FontSize', 24);
 axis tight
-subplot(3,2,2)
-plot(t/days,e - e0)
-title('Eccentricity')
-xlabel('days')
+print('../../Figure/Q2/h_fig','-depsc');
+
+
+plot(t/days,e - e0, 'LineWidth',2)
+set(gca, 'FontSize', 16, 'FontName', 'Times New Roman');
+xlabel('Days', 'interpreter', 'latex', 'FontSize', 24);
+ylabel('$e-e_0$', 'interpreter', 'latex', 'FontSize', 24);
 axis tight
-subplot(3,2,4)
-plot(t/days,(RA - RA0)/deg)
-title('Right Ascension (deg)')
-xlabel('days')
+print('../../Figure/Q2/e_fig','-depsc');
+
+
+plot(t/days,(RA - RA0)/deg, 'LineWidth',2)
+set(gca, 'FontSize', 16, 'FontName', 'Times New Roman');
+xlabel('Days', 'interpreter', 'latex', 'FontSize', 24);
+ylabel('$\Omega-Omega_0$ (deg)', 'interpreter', 'latex', 'FontSize', 24);
 axis tight
-subplot(3,2,5)
-plot(t/days,(incl - incl0)/deg)
-title('Inclination (deg)')
-xlabel('days')
+print('../../Figure/Q2/Omega_fig','-depsc');
+
+
+plot(t/days,(incl - incl0)/deg, 'LineWidth',2)
+set(gca, 'FontSize', 16, 'FontName', 'Times New Roman');
+xlabel('Days', 'interpreter', 'latex', 'FontSize', 24);
+ylabel('$i-i_0$ (deg)', 'interpreter', 'latex', 'FontSize', 24);
 axis tight
-subplot(3,2,6)
-plot(t/days,(w - w0)/deg)
-title('Argument of Perigee (deg)')
-xlabel('days')
+print('../../Figure/Q2/i_fig','-depsc');
+
+
+plot(t/days,(w - w0)/deg, 'LineWidth',2)
+set(gca, 'FontSize', 16, 'FontName', 'Times New Roman');
+xlabel('Days', 'interpreter', 'latex', 'FontSize', 24);
+ylabel('$\omega-\omega_0$ (deg)', 'interpreter', 'latex', 'FontSize', 24);
 axis tight
-subplot(3,2,3)
-plot(t/days,a - a0)
-title('Semimajor axis (km)')
-xlabel('days')
+print('../../Figure/Q2/omega_fig','-depsc');
+
+
+plot(t/days,mod((TA - TA0)/deg, 360), 'LineWidth',2)
+set(gca, 'FontSize', 16, 'FontName', 'Times New Roman');
+xlabel('Days', 'interpreter', 'latex', 'FontSize', 24);
+ylabel('$\theta-\theta_0$ (deg)', 'interpreter', 'latex', 'FontSize', 24);
 axis tight
+print('../../Figure/Q2/theta_fig','-depsc');
+
+
+
+
+% figure(2)
+% subplot(3,2,1)
+% plot(t/days,h - h0)
+% title('Angular Momentum (km^2/s)')
+% xlabel('days')
+% axis tight
+% subplot(3,2,2)
+% plot(t/days,e - e0)
+% title('Eccentricity')
+% xlabel('days')
+% axis tight
+% subplot(3,2,4)
+% plot(t/days,(RA - RA0)/deg)
+% title('Right Ascension (deg)')
+% xlabel('days')
+% axis tight
+% subplot(3,2,5)
+% plot(t/days,(incl - incl0)/deg)
+% title('Inclination (deg)')
+% xlabel('days')
+% axis tight
+% subplot(3,2,6)
+% plot(t/days,(w - w0)/deg)
+% title('Argument of Perigee (deg)')
+% xlabel('days')
+% axis tight
+% subplot(3,2,3)
+% plot(t/days,a - a0)
+% title('Semimajor axis (km)')
+% xlabel('days')
+% axis tight
 %...Subfunctions:
 % 
 
