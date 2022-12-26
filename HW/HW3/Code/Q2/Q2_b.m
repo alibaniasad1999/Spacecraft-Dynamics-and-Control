@@ -53,7 +53,7 @@ nout = 400000; %Number of solution points to output
 options = odeset(...
 'reltol', 1.e-8, ...
 'abstol', 1.e-8);
-[t,y] = ode45(@rates, 0:0.01:T0, y0, options);
+[t,y] = ode45(@rates, 0:0.1:2*T0, y0, options);
 %...Extract or compute the orbital elements' time histories from the
 % solution vector y:
 h = y(:,1);

@@ -55,7 +55,7 @@ print('../../Figure/Q2/e_fig','-depsc');
 plot(t/days,(RA - RA0)/deg, 'LineWidth',2)
 set(gca, 'FontSize', 16, 'FontName', 'Times New Roman');
 xlabel('Days', 'interpreter', 'latex', 'FontSize', 24);
-ylabel('$\Omega-Omega_0$ (deg)', 'interpreter', 'latex', 'FontSize', 24);
+ylabel('$\Omega-\Omega_0$ (deg)', 'interpreter', 'latex', 'FontSize', 24);
 axis tight
 print('../../Figure/Q2/Omega_fig','-depsc');
 
@@ -73,7 +73,7 @@ set(gca, 'FontSize', 16, 'FontName', 'Times New Roman');
 xlabel('Days', 'interpreter', 'latex', 'FontSize', 24);
 ylabel('$\omega-\omega_0$ (deg)', 'interpreter', 'latex', 'FontSize', 24);
 axis tight
-print('../../Figure/Q2/omega_fig','-depsc');
+print('../../Figure/Q2/omega_l_fig','-depsc');
 
 
 plot(t/days,mod((TA - TA0)/deg, 360), 'LineWidth',2)
