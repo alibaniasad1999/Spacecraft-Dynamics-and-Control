@@ -1,0 +1,24 @@
+\subsection{part c}
+From Bong Wie space vehicle dynamics, we have:
+\begin{equation*}
+    \begin{split}
+        U_{XX} &= \left.\dfrac{\partial^2 U}{\partial X^2}\right|_{ X = X_0} = 1 - \left((1-\mu)\left(\dfrac{1}{r_1^3}-3\dfrac{(X_0 - \mu)^2}{r_1^5}\right)+\mu \left(\dfrac{1}{r_2^3}-3\dfrac{(X_0+1-\mu)^2}{r_2^5}\right)\right)\\
+        U_{YY} &= \left.\dfrac{\partial^2 U}{\partial U^2}\right|_{ Y = Y_0} = 1 - \left((1-\mu)\left(\dfrac{1}{r_1^3}-3\dfrac{Y_0^2}{r_1^5}\right)+\mu \left(\dfrac{1}{r_2^3}-3\dfrac{Y_0^2}{r_2^5}\right)\right)\\
+    \end{split}
+\end{equation*}
+
+$$
+\lambda^4 + (4-U_{XX}-U_{YY})\lambda^2 + U_{XX}U_{YY} = 0
+$$
+Above equation solved in Q4.m MATLAB file in part c section.
+\begin{equation*}
+    \begin{split}
+        \lambda_{1, 2} &= 0.3460 \pm 0i\\
+        \lambda_{3, 4} &= 0 \pm 1.0803i
+    \end{split}
+\end{equation*}
+The in-plane motion has a divergent mode as well as an oscillatory mode with a nondimensional frequency $\omega_{xy} =  1.0803$ and the period of the in-plane oscillatory mode is 25.25 days.
+$$
+\omega_{xy} =  1.0803\times\omega_{earth-moon}  = 2.8794e-6 \rightarrow \tau = \dfrac{2\pi}{\omega_{xy}} = 5.4553e5_{\sec} = 25.2559_{day}
+$$
+
