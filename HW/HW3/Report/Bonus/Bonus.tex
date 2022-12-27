@@ -107,7 +107,7 @@ $$
 \begin{bmatrix}
     142  &  22      &   0 \\
     -22 &  -86970 &     0\\
-          0    &     0 &  0
+          0    &     0 &   -142
 \end{bmatrix}
 $$
 
@@ -116,7 +116,7 @@ $$
 \begin{bmatrix}
     -0.0005  & -0.0003   &      0\\
     -0.0001   &      0  &       0\\
-          0    &     0 & 142.4195\\
+          0    &     0 & 0.0070\\
 \end{bmatrix}
 $$
 
@@ -139,7 +139,7 @@ $$
 \delta \boldsymbol v_0^+ = \begin{bmatrix}
     0.9923\\
     -0.3086\\
-    104605.6\\
+    0.1232\\
 \end{bmatrix}_{m/\sec}
 $$
 
@@ -152,8 +152,20 @@ $$
 \delta \boldsymbol v_f^- = \begin{bmatrix}
     0.9577\\
     0.9136\\
-    105878.4\\
+    0.2465\\
 \end{bmatrix}_{m/\sec}
 $$
 
-So the change of velocity of Hubble is $|\delta \boldsymbol v_0^- - \delta \boldsymbol v_0^+|$ and the change of velocity of SpaceX is $|\delta \boldsymbol v_f^-|$. The velocity change in this maneuver is too big.
+So the change of velocity of Hubble is $|\delta \boldsymbol v_0^- - \delta \boldsymbol v_0^+|$ and the change of velocity of SpaceX is $|\delta \boldsymbol v_f^-|$. The velocity change in this maneuver is not too big. The system is unstable with LQR controller.
+
+\begin{figure}[H]
+    \caption{Three dimensional orbit trajectory}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Bonus/3Dtraj}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{The orbit trajectory}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Bonus/xyz}
+\end{figure}
