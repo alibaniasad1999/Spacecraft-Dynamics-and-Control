@@ -1,0 +1,95 @@
+\section{Question 3}
+$$\Phi = -\dfrac{J_3\,R^3 \,\mu \,{\left(3\,\cos \left(\phi \right)-5\,{\cos \left(\phi \right)}^3 \right)}}{2\,r^4 }$$
+
+
+$$
+\dfrac{\partial \Phi}{\partial x} = \dfrac{xz}{r^3\sin(\phi)}, \quad \dfrac{\partial \Phi}{\partial y} = \dfrac{yz}{r^3\sin(\phi)}, \quad \dfrac{\partial \Phi}{\partial x} = \dfrac{\sin(\phi)}{r}
+$$
+
+$$
+\dfrac{\partial \Phi}{\partial x} = \dfrac{\partial \Phi}{\partial r} \dfrac{\partial r}{\partial x} +
+\dfrac{\partial \Phi}{\partial \phi} \dfrac{\partial \phi}{\partial x}
+$$
+
+$$
+\dfrac{\partial \Phi}{\partial y} = \dfrac{\partial \Phi}{\partial r} \dfrac{\partial r}{\partial y} +
+\dfrac{\partial \Phi}{\partial \phi} \dfrac{\partial \phi}{\partial y}
+$$
+
+$$
+\dfrac{\partial \Phi}{\partial z} = \dfrac{\partial \Phi}{\partial r} \dfrac{\partial r}{\partial z} +
+\dfrac{\partial \Phi}{\partial \phi} \dfrac{\partial \phi}{\partial z}
+$$
+$$
+r = \sqrt{x^2+y^2+z^2}
+$$
+$$
+\dfrac{\partial r}{\partial x} = \dfrac xr, \quad \dfrac{\partial r}{\partial y} = \dfrac yr, \quad \dfrac{\partial r}{\partial z} = \dfrac zr
+$$
+
+$$
+\dfrac{\partial \Phi}{\partial x} = \dfrac{2\,J\,R^3 \,\mu \,x\,{\left(3\,\cos \left(\phi \right)-5\,{\cos \left(\phi \right)}^3 \right)}}{r^6 }
+$$
+
+$$
+\dfrac{\partial \Phi}{\partial y} = \dfrac{2\,J\,R^3 \,\mu \,y\,{\left(3\,\cos \left(\phi \right)-5\,{\cos \left(\phi \right)}^3 \right)}}{r^6 }
+$$
+
+$$
+\dfrac{\partial \Phi}{\partial z} = \dfrac{2\,J\,R^3 \,\mu \,z\,{\left(3\,\cos \left(\phi \right)-5\,{\cos \left(\phi \right)}^3 \right)}}{r^6 }
+$$
+using the fact that $\cos(\phi) = \dfrac{z}{r}$ leads to the following expressions for the gradient of perturbing potential $\Phi$:
+
+$$
+\dfrac{\partial \Phi}{\partial x} = -\dfrac{2\,J\,R^3 \,\mu \,x\,{\left(\dfrac{5\,z^3 }{r^3 }-\dfrac{3\,z}{r}\right)}}{r^6 }
+$$
+
+$$
+\dfrac{\partial \Phi}{\partial y} = -\dfrac{2\,J\,R^3 \,\mu \,y\,{\left(\dfrac{5\,z^3 }{r^3 }-\dfrac{3\,z}{r}\right)}}{r^6 }
+$$
+
+$$
+\dfrac{\partial \Phi}{\partial z} = -\dfrac{2\,J\,R^3 \,\mu \,z\,{\left(\dfrac{5\,z^3 }{r^3 }-\dfrac{3\,z}{r}\right)}}{r^6 }
+$$
+
+$$
+\begin{bmatrix}
+    \boldsymbol{\mathrm{Q}}
+\end{bmatrix}_{Xr} = \begin{bmatrix}
+    -\sin(\Omega)\cos(i)\sin(u) + \cos(\Omega)\cos(u) & \cos(\Omega)\cos(i)\sin(u) + \sin(\Omega)\cos(u) & \sin(i)\sin(u)\\
+    -\sin(\Omega)\cos(i)\sin(u) - \cos(\Omega)\cos(u) & \cos(\Omega)\cos(i)\sin(u) - \sin(\Omega)\cos(u) & \sin(i)\sin(u) \\
+    \sin(\Omega)\sin(i) & -\cos(\Omega)\sin(i) & \cos(i)
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+    p_r \\ p_s \\ p_w
+\end{bmatrix} = \begin{bmatrix}
+    \boldsymbol{\mathrm{Q}}
+\end{bmatrix}_{Xr} \begin{bmatrix}
+    p_X \\ p_Y \\ p_Z
+\end{bmatrix}
+$$
+
+$$
+\begin{bmatrix}
+    p_r \\ p_s \\ p_w
+\end{bmatrix} = \begin{bmatrix}
+    \boldsymbol{\mathrm{Q}}
+\end{bmatrix}_{Xr}  \begin{bmatrix}
+     -\dfrac{2\,J\,R^3 \,\mu \,x\,{\left(\dfrac{5\,z^3 }{r^3 }-\dfrac{3\,z}{r}\right)}}{r^6 }
+    \\
+    -\dfrac{2\,J\,R^3 \,\mu \,y\,{\left(\dfrac{5\,z^3 }{r^3 }-\dfrac{3\,z}{r}\right)}}{r^6 }
+    \\
+    -\dfrac{2\,J\,R^3 \,\mu \,z\,{\left(\dfrac{5\,z^3 }{r^3 }-\dfrac{3\,z}{r}\right)}}{r^6 }
+\end{bmatrix}
+$$
+
+$$
+\dfrac{de}{dt} = \dfrac{\left(1-e^2\right)^{1/2}}{na}\left(\sin(\theta)p_r + (\cos(\theta)+\cos(E))p_s\right)
+$$
+where:
+$$
+n = \sqrt{\dfrac{\mu}{a^3}}
+$$
