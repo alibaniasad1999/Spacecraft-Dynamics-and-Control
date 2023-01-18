@@ -34,7 +34,7 @@ r_1 = norm(r_1);
 r_2 = norm(r_2);
 
 
-[t, X] = ode45(@diff_eq_orbit_global_canonical,0:0.001:100,[r';v']);
+[t, X] = ode45(@diff_eq_orbit_global_canonical,0:0.001:10,[r';v']);
 
 %% ploter %%
 
@@ -64,15 +64,21 @@ lambda_ans = double(vpa(solve(eq_lambda)))
 %% subfunctions %%
 function d = diff_eq_orbit_global_canonical(~, x)
 
-global mu r_1 r_2
+global mu
 
 d = zeros(6, 1);
+% r_1 =  -[mu, 0, 0] + d(1:3)';
+% r_2 = [1-mu, 0, 0] + d(1:3)';
 
 d(1) = x(4); % dot x
 d(2) = x(5); % dot y
 d(3) = x(6); % dot z
+r_1 =  -[mu, 0, 0] + x(1:3)';
+r_2 = [1-mu, 0, 0] + x(1:3)'; % update r
+r_1 = norm(r_1);
+r_2 = norm(r_2);
 
-d(4) = 2*x(5) + x(1) - (1 - mu)/r_1^3 * (x(1)-mu) - mu/r_2^3*(x(1)+1-mu); % ddot x
+d(4) = 2*x(5) + x(1) - (1 - mu)/r_1^3 * (x(1)-mu) - mu/r_2^3*(x(1)-1+mu); % ddot x %%%%%%% 
 d(5) = -2*x(4) + x(2) - (1-mu)/r_1^3* x(2) - mu/r_2^3 * x(2); % ddot y
 d(6) = -(1-mu)/r_1^3 * x(3) - mu/r_2^3*x(3);
 end
