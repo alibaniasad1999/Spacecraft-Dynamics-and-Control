@@ -71,6 +71,23 @@ Rotation matrix calculated via eigen vector of inertia matrix (used MATLAB to ca
          0.4082&   -0.7071&    0.5774\\
     \end{bmatrix}
 \end{equation}
+
+$$
+\boldsymbol{\mathrm{I}}' = \boldsymbol{\mathrm{A}}^T \times \boldsymbol{\mathrm{I}} \times \boldsymbol{\mathrm{A}} = \begin{bmatrix}
+    10 & 0  & 0 \\
+    0  & 30 & 0\\
+    0  & 0  & 40
+\end{bmatrix}, \quad \boldsymbol{\mathrm{\omega}}' = \boldsymbol{\mathrm{A}}^T \boldsymbol{\mathrm{\omega}} = \begin{bmatrix}
+    -8.1650\\
+    -14.1421\\
+      5.7735
+\end{bmatrix}
+$$
+
+$$
+h = |\boldsymbol{\mathrm{I}} \times \boldsymbol{\mathrm{\omega}}| = 489.8979
+$$
+
 We know that above matrix shows the direction cosines of the principal axes with the primary body axes. Used MATLAB function (dcm2angle) to calculate euler angles between two corinate system.
 $$
 \begin{bmatrix}
@@ -89,7 +106,11 @@ Ellipsoid of inertia calculated as folow:
 \begin{equation}
     \dfrac{X^2}{\left(\sqrt{\dfrac{1}{\mathrm{I}_x}}\right)^2} + 
     \dfrac{Y^2}{\left(\sqrt{\dfrac{1}{\mathrm{I}_y}}\right)^2} + 
-    \dfrac{Z^2}{\left(\sqrt{\dfrac{1}{\mathrm{I}_z}}\right)^2} = 1
+    \dfrac{Z^2}{\left(\sqrt{\dfrac{1}{\mathrm{I}_z}}\right)^2} =
+    \dfrac{X^2}{\left(\sqrt{\dfrac{1}{10}}\right)^2} + 
+    \dfrac{Y^2}{\left(\sqrt{\dfrac{1}{30}}\right)^2} + 
+    \dfrac{Z^2}{\left(\sqrt{\dfrac{1}{40}}\right)^2} =
+     1
 \end{equation} 
 
 \begin{figure}[H]
@@ -114,4 +135,54 @@ Ellipsoid of inertia calculated as folow:
     \caption{elipsoid of inertia in xy plane}
     \centering
     \includegraphics[width=12cm]{../Figure/Q1/xy_view_elipsoid_inertia}
+\end{figure}
+
+\part{part d}
+
+Angular momentum and rotational kinetic energy elipsoid calculated as folow:
+
+\begin{equation}
+    \dfrac{\omega_x^2}{\left(\dfrac{h}{\mathrm{I}_x}\right)^2} +
+    \dfrac{\omega_y^2}{\left(\dfrac{h}{\mathrm{I}_y}\right)^2} +
+    \dfrac{\omega_z^2}{\left(\dfrac{h}{\mathrm{I}_z}\right)^2} =
+    \dfrac{\omega_x^2}{\left(\dfrac{490}{10}\right)^2} +
+    \dfrac{\omega_y^2}{\left(\dfrac{490}{30}\right)^2} +
+    \dfrac{\omega_z^2}{\left(\dfrac{490}{40}\right)^2} =
+     1
+\end{equation}
+
+
+\begin{equation}
+    \dfrac{\omega_x^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_x}}\right)^2} +
+    \dfrac{\omega_y^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_y}}\right)^2} +
+    \dfrac{\omega_z^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_z}}\right)^2} =
+    \dfrac{\omega_x^2}{\left(\sqrt{\dfrac{2\times 4000}{10}}\right)^2} +
+    \dfrac{\omega_y^2}{\left(\sqrt{\dfrac{2\times 4000}{30}}\right)^2} +
+    \dfrac{\omega_z^2}{\left(\sqrt{\dfrac{2\times 4000}{40}}\right)^2} = 1
+\end{equation}
+
+Ellipsoid parameter calculated before, now, use them to draw the elipsoid.
+
+\begin{figure}[H]
+    \caption{Angular momentum and rotational kinetic energy elipsoid of inertia}
+    \centering
+    \includegraphics[width=16cm]{../Figure/Q1/3Dof_view}
+\end{figure}
+\vspace{-1.5cm}
+\begin{figure}[H]
+    \caption{Angular momentum and rotational kinetic energy elipsoid of inertia in zx plane}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q1/xz_view}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{Angular momentum and rotational kinetic energy elipsoid of inertia zy plane}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q1/yz_view}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{Angular momentum and rotational kinetic energy elipsoid of inertia in xy plane}
+    \centering
+    \includegraphics[width=12cm]{../Figure/Q1/xy_view}
 \end{figure}

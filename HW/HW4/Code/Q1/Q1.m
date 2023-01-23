@@ -93,6 +93,12 @@ plot3(x, y, z, 'color' , "#0072BD", 'LineWidth', 10);
 axis equal
 
 shading interp
+set(gca, 'FontSize', 16, 'FontName', 'Times New Roman');
+xlabel('X', 'interpreter', 'latex', 'FontSize', 24);
+ylabel('Y', 'interpreter', 'latex', 'FontSize', 24);
+zlabel('Z', 'interpreter', 'latex', 'FontSize', 24);
+
+legend('Angular momentum','rotational kinetic energy', 'interpreter', 'latex', 'Location','northeast', 'FontSize', 20);
 
 print -depsc ../../Figure/Q1/3Dof_view
 
