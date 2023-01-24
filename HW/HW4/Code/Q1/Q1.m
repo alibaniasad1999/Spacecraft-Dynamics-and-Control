@@ -98,7 +98,7 @@ xlabel('X', 'interpreter', 'latex', 'FontSize', 24);
 ylabel('Y', 'interpreter', 'latex', 'FontSize', 24);
 zlabel('Z', 'interpreter', 'latex', 'FontSize', 24);
 
-legend('Angular momentum','rotational kinetic energy', 'interpreter', 'latex', 'Location','northeast', 'FontSize', 20);
+legend('Angular momentum','Rotational kinetic energy', 'Location','northeast', 'FontSize', 20);
 
 print -depsc ../../Figure/Q1/3Dof_view
 
