@@ -19,10 +19,10 @@ omega = [2,3,5] * 10^-3 * 2 * pi;
 initial_condition = [omega, euler_angles*pi/180]';
 
 options = odeset('AbsTol', 1e-8, 'RelTol', 1e-9);
-[t_non_linear, x_non_linear] = ode45(@diff_eq_non_linear,0:1000,initial_condition, options);
+[t_non_linear, x_non_linear] = ode45(@diff_eq_non_linear,0:5000,initial_condition, options);
 
 
-[t_linear, x_linear] = ode45(@diff_eq_linear,0:1000,initial_condition, options);
+[t_linear, x_linear] = ode45(@diff_eq_linear,0:5000,initial_condition, options);
 
 %% ploter %%
 % phi 50
@@ -55,16 +55,16 @@ xlabel('Time ($\sec$)', 'interpreter', 'latex', 'FontSize', 24);
 ylabel('$\psi^{\circ}$', 'interpreter', 'latex', 'FontSize', 24);
 print('../../Figure/Q2/psi_50','-depsc');
 hold off
-%%%% 1000 sec %%%%
-% phi 1000
+%%%% 5000 sec %%%%
+% phi 5000
 plot(t_linear, x_linear(:, 4)*180/pi, 'LineWidth',2)
 hold on
 plot(t_non_linear, x_non_linear(:, 4)*180/pi, 'LineWidth',2)
-legend('linear', 'non linear', 'Location','northwest', 'FontSize', 20);
+legend('linear', 'non linear', 'Location','southwest', 'FontSize', 20);
 set(gca, 'FontSize', 16, 'FontName', 'Times New Roman');
 xlabel('Time ($\sec$)', 'interpreter', 'latex', 'FontSize', 24);
 ylabel('$\phi^{\circ}$', 'interpreter', 'latex', 'FontSize', 24);
-print('../../Figure/Q2/phi_1000','-depsc');
+print('../../Figure/Q2/phi_5000','-depsc');
 hold off
 % theta 1000
 plot(t_linear, x_linear(:, 5)*180/pi, 'LineWidth',2)
@@ -74,17 +74,17 @@ legend('linear', 'non linear', 'Location','northwest', 'FontSize', 20);
 set(gca, 'FontSize', 16, 'FontName', 'Times New Roman');
 xlabel('Time ($\sec$)', 'interpreter', 'latex', 'FontSize', 24);
 ylabel('$\theta^{\circ}$', 'interpreter', 'latex', 'FontSize', 24);
-print('../../Figure/Q2/theta_1000','-depsc');
+print('../../Figure/Q2/theta_5000','-depsc');
 hold off
 % psi 1000
 plot(t_linear, x_linear(:, 6)*180/pi, 'LineWidth',2)
 hold on
 plot(t_non_linear, x_non_linear(:, 6)*180/pi, 'LineWidth',2)
-legend('linear', 'non linear', 'Location','southwest', 'FontSize', 20);
+legend('linear', 'non linear', 'Location','northwest', 'FontSize', 20);
 set(gca, 'FontSize', 16, 'FontName', 'Times New Roman');
 xlabel('Time ($\sec$)', 'interpreter', 'latex', 'FontSize', 24);
 ylabel('$\psi^{\circ}$', 'interpreter', 'latex', 'FontSize', 24);
-print('../../Figure/Q2/psi_1000','-depsc');
+print('../../Figure/Q2/psi_5000','-depsc');
 hold off
 %% ode functions %%
 function d = diff_eq_non_linear(~, x)
