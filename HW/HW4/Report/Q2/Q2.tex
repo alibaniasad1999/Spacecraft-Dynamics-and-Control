@@ -75,7 +75,7 @@ $$
         0 \\ \omega_0 \\ 0
     \end{bmatrix}
 \end{equation}
-where $\boldsymbol{\mathrm{C}}_R^b$ is transformation matrix.
+where $\boldsymbol{\mathrm{C}}_R^b$ is transformation matrix aand $\omega_0 = \sqrt{\dfrac{\mu}{R_0^3}}$.
 
 \begin{equation}
     \boldsymbol{\mathrm{C}}_b^R = \begin{bmatrix}
@@ -96,7 +96,7 @@ Using euler propagation:
     \end{bmatrix} = \begin{bmatrix}
         1 & \sin(\phi)\tan(\theta) & \cos(\phi)\tan(\theta)\\
         0 & \cos(\phi) & -\sin(\phi) \\
-        0 & \dfrac{(\phi)}{\cos(\theta)} & \dfrac{\cos(\phi)}{\cos(\theta)}
+        0 & \dfrac{\sin(\phi)}{\cos(\theta)} & \dfrac{\cos(\phi)}{\cos(\theta)}
     \end{bmatrix} \begin{bmatrix}
         p \\q \\ r
     \end{bmatrix}

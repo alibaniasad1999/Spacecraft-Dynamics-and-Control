@@ -15,18 +15,6 @@
 \usepackage{siunitx}
 \usepackage{mathtools}
 \usepackage{mathrsfs}
-\newcommand{\slantbox}[2][0]{\mbox{%
-        \sbox{\foobox}{#2}%
-        \foodim=#1\wd\foobox
-        \hskip \wd\foobox
-        \hskip -0.5\foodim
-        \pdfsave
-        \pdfsetmatrix{1 0 #1 1}%
-        \llap{\usebox{\foobox}}%
-        \pdfrestore
-        \hskip 0.5\foodim
-}}
-\def\Laplace{\slantbox[-.45]{\mathscr{L}}}
 \pagestyle{fancy}
 \fancyhead[R]{\rightmark}
 \fancyhead[L]{Ali BaniAsad 401209244}
@@ -52,6 +40,7 @@
 	\input{Q1/Q1}
 	\input{Q2/Q2}
 	\input{Q3/Q3}
+	\input{Q4/Q4}
 	\newpage
 	\tableofcontents
 	\newpage
