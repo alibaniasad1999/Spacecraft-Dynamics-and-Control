@@ -114,32 +114,32 @@ Ellipsoid of inertia calculated as folow:
 \end{equation} 
 
 \begin{figure}[H]
-    \caption{elipsoid of inertia}
+    \caption{ellipsoid of inertia}
     \centering
     \includegraphics[width=17cm]{../Figure/Q1/3Dof_view_elipsoid_inertia}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{elipsoid of inertia in zx plane}
+    \caption{ellipsoid of inertia in zx plane}
     \centering
     \includegraphics[width=12cm]{../Figure/Q1/xz_view_elipsoid_inertia}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{elipsoid of inertia zy plane}
+    \caption{ellipsoid of inertia zy plane}
     \centering
     \includegraphics[width=12cm]{../Figure/Q1/yz_view_elipsoid_inertia}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{elipsoid of inertia in xy plane}
+    \caption{ellipsoid of inertia in xy plane}
     \centering
     \includegraphics[width=12cm]{../Figure/Q1/xy_view_elipsoid_inertia}
 \end{figure}
 
 \subsection{part d}
 
-Angular momentum and rotational kinetic energy elipsoid calculated as folow:
+Angular momentum and rotational kinetic energy ellipsoid calculated as folow:
 
 \begin{equation}
     \dfrac{\omega_x^2}{\left(\dfrac{h}{\mathrm{I}_x}\right)^2} +
@@ -161,28 +161,65 @@ Angular momentum and rotational kinetic energy elipsoid calculated as folow:
     \dfrac{\omega_z^2}{\left(\sqrt{\dfrac{2\times 4000}{40}}\right)^2} = 1
 \end{equation}
 
-Ellipsoid parameter calculated before, now, use them to draw the elipsoid.
+Ellipsoid parameter calculated before, now, use them to draw the ellipsoid.
 
 \begin{figure}[H]
-    \caption{Angular momentum and rotational kinetic energy elipsoid of inertia}
+    \caption{Angular momentum and rotational kinetic energy ellipsoid of inertia}
     \centering
     \includegraphics[width=16cm]{../Figure/Q1/3Dof_view}
 \end{figure}
 \vspace{-1.5cm}
 \begin{figure}[H]
-    \caption{Angular momentum and rotational kinetic energy elipsoid of inertia in zx plane}
+    \caption{Angular momentum and rotational kinetic energy ellipsoid of inertia in zx plane}
     \centering
     \includegraphics[width=12cm]{../Figure/Q1/xz_view}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Angular momentum and rotational kinetic energy elipsoid of inertia zy plane}
+    \caption{Angular momentum and rotational kinetic energy ellipsoid of inertia zy plane}
     \centering
     \includegraphics[width=12cm]{../Figure/Q1/yz_view}
 \end{figure}
 
 \begin{figure}[H]
-    \caption{Angular momentum and rotational kinetic energy elipsoid of inertia in xy plane}
+    \caption{Angular momentum and rotational kinetic energy ellipsoid of inertia in xy plane}
     \centering
     \includegraphics[width=12cm]{../Figure/Q1/xy_view}
 \end{figure}
+
+\subsection{Bonus}
+
+\begin{equation}
+    \dfrac{\omega_x^2}{\left(\dfrac{h}{\mathrm{I}_x}\right)^2} +
+    \dfrac{\omega_y^2}{\left(\dfrac{h}{\mathrm{I}_y}\right)^2} +
+    \dfrac{\omega_z^2}{\left(\dfrac{h}{\mathrm{I}_z}\right)^2} = 1 \to \omega_x^2 = -\dfrac{\left(\dfrac{h}{\mathrm{I}_x}\right)^2\omega_y^2}{\left(\dfrac{h}{\mathrm{I}_y}\right)^2} -
+    \dfrac{\left(\dfrac{h}{\mathrm{I}_x}\right)^2\omega_z^2}{\left(\dfrac{h}{\mathrm{I}_z}\right)^2} + \left(\dfrac{h}{\mathrm{I}_x}\right)^2
+\end{equation}
+
+
+\begin{equation}
+    \dfrac{\omega_x^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_x}}\right)^2} +
+    \dfrac{\omega_y^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_y}}\right)^2} +
+    \dfrac{\omega_z^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_z}}\right)^2} = 1 \to     \dfrac{-\dfrac{\left(\dfrac{h}{\mathrm{I}_x}\right)^2\omega_y^2}{\left(\dfrac{h}{\mathrm{I}_y}\right)^2} -
+    \dfrac{\left(\dfrac{h}{\mathrm{I}_x}\right)^2\omega_z^2}{\left(\dfrac{h}{\mathrm{I}_z}\right)^2} + \left(\dfrac{h}{\mathrm{I}_x}\right)^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_x}}\right)^2} +
+    \dfrac{\omega_y^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_y}}\right)^2} +
+    \dfrac{\omega_z^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_z}}\right)^2} = 1
+\end{equation}
+
+\begin{equation}
+    \to -\dfrac{\left(\dfrac{h}{\mathrm{I}_x}\right)^2\omega_y^2}{\left(\dfrac{h}{\mathrm{I}_y}\right)^2} -
+    \dfrac{\left(\dfrac{h}{\mathrm{I}_x}\right)^2\omega_z^2}{\left(\dfrac{h}{\mathrm{I}_z}\right)^2} + \left(\dfrac{h}{\mathrm{I}_x}\right)^2 +
+    \dfrac{\left(\sqrt{\dfrac{2T}{\mathrm{I}_x}}\right)^2\omega_y^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_y}}\right)^2} +
+    \dfrac{\left(\sqrt{\dfrac{2T}{\mathrm{I}_x}}\right)^2\omega_z^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_z}}\right)^2} =\left(\sqrt{\dfrac{2T}{\mathrm{I}_x}}\right)^2
+\end{equation}
+
+\begin{equation}
+    \omega^2_y \left(-\dfrac{\left(\dfrac{h}{\mathrm{I}_x}\right)^2}{\left(\dfrac{h}{\mathrm{I}_y}\right)^2}+\dfrac{\left(\sqrt{\dfrac{2T}{\mathrm{I}_x}}\right)^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_y}}\right)^2} \right) + \omega_z^2\left(-\dfrac{\left(\dfrac{h}{\mathrm{I}_x}\right)^2}{\left(\dfrac{h}{\mathrm{I}_z}\right)^2}+\dfrac{\left(\sqrt{\dfrac{2T}{\mathrm{I}_x}}\right)^2}{\left(\sqrt{\dfrac{2T}{\mathrm{I}_z}}\right)^2} \right) = \left(\sqrt{\dfrac{2T}{\mathrm{I}_x}}\right)^2 - \left(\dfrac{h}{\mathrm{I}_x}\right)^2
+\end{equation}
+
+\begin{equation}
+    \omega_y^2\left(\dfrac{\mathrm{I}_y}{\mathrm{I}_x} - \dfrac{\mathrm{I}_y^2}{\mathrm{I}_x^2} \right) +
+    \omega_z^2\left(\dfrac{\mathrm{I}_z}{\mathrm{I}_x} - \dfrac{\mathrm{I}_z^2}{\mathrm{I}_x^2} \right) = \left(\sqrt{\dfrac{2T}{\mathrm{I}_x}}\right)^2 - \left(\dfrac{h}{\mathrm{I}_x}\right)^2
+\end{equation}
+
+Mathematical formulas for the Polhode curves is a ellipsoid in yz plane.
